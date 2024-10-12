@@ -1,0 +1,91 @@
+:root {
+    --text-color: #FFFFFF;  
+    --link-color: #0000EE; 
+    --background-color: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* anchor tags which are links */
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */ 
+
+/* adds space between links and adds */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+/* changes first name link*/
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* changes color for right hand side links and adds spacing between*/
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+/* adds box to email and smooths the border*/
+nav .right a:last-child
+{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+/* adds spacing between the mail icon and the email text*/
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* changes style based on screen width, this case 600 px and below*/
+@media (max-width: 600px){
+    /* NAVBAR*/
+    /* change screen paddings*/
+    nav{
+        padding: 0 20px; 
+    }
+
+    /* changes font size of all icons*/
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child
+    {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* Removes words from link icons on right hand side*/
+    nav .right a span {
+        display: none;
+    }
+
+}
