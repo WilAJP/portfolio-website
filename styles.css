@@ -124,8 +124,67 @@ nav .right a span {
 
 .hero-section .headshot img {
     width: 450px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* adds shadow to border so it stands out*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* adds shadow to border so it stands out*/
     border-radius: 50%;
+}
+
+/* Section 2: Skills*/
+.skills-section  {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+/* edits header 2*/
+.skills-section h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 35px;
+}
+
+/* edits description txt*/
+.skills-section .text {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* edits each cell text and icon*/
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* handles each individual cell*/
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #404040;
+    border-radius: 5px;
+
+    min-width: 150px; 
+    min-height: 70px;
+}
+
+/* handles image smoothness and size*/
+.skills-section .cells .cell img {
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain;
+    border-radius: 2px;
+    
+}
+
+/* changes icon text color and size*/
+.skills-section .cells .cell span 
+{
+    color: var(--text-color);
+    font-size: 19px;
 }
 
 @media (max-width: 850px){
@@ -181,6 +240,15 @@ nav .right a span {
 
     .hero-section .text h2 {
         font-size: 30px;
+    }
+
+    /* Section 2: Skills*/
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
     }
 
 }
