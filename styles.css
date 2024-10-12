@@ -1,9 +1,13 @@
+/* Global varibales */
 :root {
     --text-color: #FFFFFF;  
-    --link-color: #0000EE; 
+    --text2-color: #B3B3B3;
+    --link-color: #42a5f5; 
     --background-color: #121212;
+    --hover-color: #b0bec5; 
 }
 
+/* Targeting everything */
 * {
     margin: 0;
     padding: 0; 
@@ -14,6 +18,7 @@ html{
     scroll-behavior: smooth;
 }
 
+/* setting font and color for all body text */
 body{
     font-family: 'Inter', sans-serif;
     background-color: var(--background-color);
@@ -63,6 +68,85 @@ nav .right a span {
     margin-left: 5px;
 }
 
+/* Section 1: Hero */
+/* customizes hero section*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+/* ratio, the text section will have 5 out of the 7 in terms of spacing*/
+.hero-section .text {
+    color: var(--text-color);
+    flex: 5; 
+}
+
+/* Edits introduction*/
+.hero-section .text h2{
+    font-size: 45px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+/* When resizing, contains wrap around of links into one element*/
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color); /* adds boder to links*/
+    border-radius: 5px; /* rounded corners*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s; /* adds transition when hovering over links*/
+}
+
+/* makes pseudo class to change hover color*/
+.hero-section .text .links a:hover {
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color)
+
+}
+
+/* ratio for headshot*/
+.hero-section .headshot {
+    flex: 2; 
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img {
+    width: 450px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* adds shadow to border so it stands out*/
+    border-radius: 50%;
+}
+
+@media (max-width: 850px){
+    /* Section 1: Hero*/
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px){
+    /* Section 1: Hero*/
+    .hero-section {
+        flex-direction: column-reverse; 
+    }
+
+    .hero-section .headshot img {
+        width: 300px;
+        
+    }
+}
+
 /* changes style based on screen width, this case 600 px and below*/
 @media (max-width: 600px){
     /* NAVBAR*/
@@ -76,6 +160,7 @@ nav .right a span {
         font-size: 22px;
     }
 
+    /* removes box from email icon */
     nav .right a:last-child
     {
         color: var(--text-color);
@@ -86,6 +171,16 @@ nav .right a span {
     /* Removes words from link icons on right hand side*/
     nav .right a span {
         display: none;
+    }
+
+    /* Section 1: Hero*/
+
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px;
     }
 
 }
