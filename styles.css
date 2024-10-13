@@ -165,7 +165,7 @@ nav .right a span {
 }
 
 .skills-section .cells .cell:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 /* handles each individual cell*/
@@ -307,11 +307,12 @@ nav .right a span {
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 1px;
     border: 1.5px solid #404040;
-    border-radius: 20px;
+    border-radius: 8px;
     min-width: 100px;
     min-height: 50px;
+    background-color: #333333;
 }
 
 /* Icon styling */
@@ -326,6 +327,42 @@ nav .right a span {
 .project-tech-icons .cell span {
     color: var(--text-color);
     font-size: 16px;
+}
+
+/* SECTION 4: CONTACTS*/
+.contacts-section { 
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contacts-section h2 {
+    font-size: 35px;
+
+}
+
+.contacts-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contacts-section .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contacts-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-section .group form input, 
+.contacts-section .group form textarea {
+    font-family: 'Inter', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: var(--hover-color);
+    padding: 10px;
+    margin-bottom: 15px;    
 }
 
 
