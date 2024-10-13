@@ -9,7 +9,7 @@
 
 /* When clicking the skills link, it will center it on your screen*/
 #skills {
-    scroll-margin-top: 250px; /* Adjust as necessary to center the section more */
+    scroll-margin-top: 230px; /* Adjust as necessary to center the section more */
 }
 /* Targeting everything */
 * {
@@ -26,6 +26,8 @@ html{
 body{
     font-family: 'Inter', sans-serif;
     background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* anchor tags which are links */
@@ -162,6 +164,8 @@ nav .right a span {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    transition: .5s;
+    cursor: default;
 }
 
 .skills-section .cells .cell:hover {
@@ -331,11 +335,13 @@ nav .right a span {
 
 /* SECTION 4: CONTACTS*/
 .contacts-section { 
+    margin-top: 200px;
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
 .contacts-section h2 {
+    color: var(--text-color);
     font-size: 35px;
 
 }
@@ -346,11 +352,13 @@ nav .right a span {
 }
 
 .contacts-section .group .text {
+    color: var(--text2-color);
     flex: 3;
     margin-top: 20px;
 }
 
 .contacts-section .group form {
+    color: var(--text2-color);
     flex: 3;
     display: flex;
     flex-direction: column;
@@ -362,7 +370,24 @@ nav .right a span {
     border: 2px solid var(--link-color);
     background-color: var(--hover-color);
     padding: 10px;
-    margin-bottom: 15px;    
+    margin-bottom: 15px;  
+    outline: none;  
+    resize: none;
+}
+
+.contacts-section .group form button {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+    
+}
+.contacts-section .group form button:hover {
+    filter: brightness(.9);
 }
 
 
@@ -382,6 +407,18 @@ nav .right a span {
     .hero-section .headshot img {
         width: 300px;
         
+    }
+    
+
+     /* SECTION 3: PROJECTS*/
+     .projects-section{
+        padding: 0 5px;
+    }
+
+
+    /* SECTION 4: contacts*/
+    .contacts-section .group {
+        flex-direction: column;
     }
 }
 
@@ -444,6 +481,12 @@ nav .right a span {
 
     .project-section .project-card p {
         font-size: 13px;
+    }
+
+
+    /* SECTION 4: contacts*/
+    .contacts-section {
+        padding: 0 20px;
     }
 
 }
