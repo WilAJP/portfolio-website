@@ -149,9 +149,15 @@
                             <img src="images/html-logo.webp" alt="HTML logo">
                             <span>HTML</span>
                         </div>
+
                         <div class="cell">
                             <img src="images/css-logo.webp" alt="CSS logo">
                             <span>CSS</span>
+                        </div>
+
+                        <div class="cell">
+                            <img src="images/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript logo">
+                            <span>JavaScript</span>
                         </div>
                         
                     </div>
@@ -162,7 +168,7 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <img src="images/gamemenu.webp" alt="Screenshot of game menu" class="project-image">
-                    <h3>2d Top Down Game</h3>
+                    <h3>Top-Down 2D RPG</h3>
                     <p> This top-down game is being developed as part of a school project using GameMaker 2024.400. It’s currently 
                         in development, and we're continuously working to improve and expand it.</p>
                     
@@ -218,39 +224,7 @@
                     <button type="submit">Send Message</button>
                 </form>
 
-
-
-
-
-                <script>
-                    const form = document.getElementById('contactForm');
-                    form.addEventListener('submit', function(e) {
-                        e.preventDefault(); // Prevent the form from submitting the traditional way
-            
-                        const formData = {
-                            name: document.getElementById('name').value,
-                            email: document.getElementById('email').value,
-                            message: document.getElementById('message').value
-                        };
-            
-                        fetch('https://script.google.com/macros/s/AKfycbzJ4gr23JUiQn1P6AmmOzXfxrZS-EUjV1wiA4B2TVoddkoecuKM5HI-C8Ncb1E59t9_Gg/exec', {  // Replace with your Google Apps Script URL
-                            method: 'POST',
-                            mode: 'no-cors', // No-cors to prevent CORS issues
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(formData)
-                        })
-                        .then(response => {
-                            alert('Your message has been sent!');
-                            form.reset(); // Reset the form after submission
-                        })
-                        .catch(error => {
-                            alert('There was a problem sending your message.');
-                            console.error('Error:', error);
-                        });
-                    });
-                </script>
+                <script src="contactForm.js"></script>
                 
             </div>
 

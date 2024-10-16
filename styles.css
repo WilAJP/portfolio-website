@@ -327,6 +327,14 @@ nav .right a span {
     border-radius: 2px;
 }
 
+/* Increases size for JavaScript Icon*/
+.project-tech-icons .cell:nth-of-type(3) img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
 /* Text below each icon */
 .project-tech-icons .cell span {
     color: var(--text-color);
