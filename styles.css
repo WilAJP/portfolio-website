@@ -491,6 +491,13 @@ nav .right a span {
         font-size: 13px;
     }
 
+    .project-tech-icons .cell:nth-of-type(3) img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        border-radius: 2px;
+    }
+
 
     /* SECTION 4: contacts*/
     .contacts-section {
